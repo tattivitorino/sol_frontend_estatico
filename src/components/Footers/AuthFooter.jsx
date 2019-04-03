@@ -1,25 +1,27 @@
-/*eslint-disable*/
 import React from "react";
-
-// reactstrap components
 import { NavItem, NavLink, Nav, Container, Row, Col } from "reactstrap";
 
 class Login extends React.Component {
+  getYear() {
+    return new Date().getFullYear();
+  }
+
   render() {
     return (
       <>
-        <footer className="py-5">
+        <footer className="pt-6 pb-3">
           <Container>
             <Row className="align-items-center justify-content-xl-between">
               <Col xl="6">
                 <div className="copyright text-center text-xl-left text-muted">
-                  © 2018{" "}
+                  © {this.getYear()}{" "}
                   <a
                     className="font-weight-bold ml-1"
-                    href="https://www.creative-tim.com?ref=adr-auth-footer"
+                    href="http://martuccimelillo.com.br/"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    Creative Tim
+                    Martucci Melillo
                   </a>
                 </div>
               </Col>
@@ -27,34 +29,34 @@ class Login extends React.Component {
                 <Nav className="nav-footer justify-content-center justify-content-xl-end">
                   <NavItem>
                     <NavLink
-                      href="https://www.creative-tim.com?ref=adr-auth-footer"
+                      href="http://martuccimelillo.com.br/escritorio"
                       target="_blank"
                     >
-                      Creative Tim
+                      Sobre nós
                     </NavLink>
                   </NavItem>
                   <NavItem>
                     <NavLink
-                      href="https://www.creative-tim.com/presentation?ref=adr-auth-footer"
+                      href="http://martuccimelillo.com.br/servicos"
                       target="_blank"
                     >
-                      About Us
+                      Serviços
                     </NavLink>
                   </NavItem>
                   <NavItem>
                     <NavLink
-                      href="http://blog.creative-tim.com?ref=adr-auth-footer"
+                      href="http://martuccimelillo.com.br/artigos"
                       target="_blank"
                     >
-                      Blog
+                      Artigos
                     </NavLink>
                   </NavItem>
                   <NavItem>
                     <NavLink
-                      href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md?ref=adr-auth-footer"
+                      href="http://martuccimelillo.com.br/contato"
                       target="_blank"
                     >
-                      MIT License
+                      Contato
                     </NavLink>
                   </NavItem>
                 </Nav>

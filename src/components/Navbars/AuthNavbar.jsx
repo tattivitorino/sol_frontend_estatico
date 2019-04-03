@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// reactstrap components
 import {
   UncontrolledCollapse,
   NavbarBrand,
@@ -18,31 +17,31 @@ class AdminNavbar extends React.Component {
     return (
       <>
         <Navbar
-          className="navbar-top navbar-horizontal navbar-dark"
-          expand="md"
+          className='navbar-top navbar-horizontal navbar-dark'
+          expand='md'
         >
-          <Container className="px-4">
-            <NavbarBrand to="/" tag={Link}>
-              <img alt="..." src={require("assets/img/brand/argon-react-white.png")} />
+          <Container className='px-4'>
+            <NavbarBrand href="http://martuccimelillo.com.br" target="_blank">
+              <img alt='Martucci Melillo' src={require('../../assets/img/brand/logo-martucci-clean.png')} />
             </NavbarBrand>
-            <button className="navbar-toggler" id="navbar-collapse-main">
-              <span className="navbar-toggler-icon" />
+            <button className='navbar-toggler' id='navbar-collapse-main'>
+              <span className='navbar-toggler-icon' />
             </button>
-            <UncontrolledCollapse navbar toggler="#navbar-collapse-main">
-              <div className="navbar-collapse-header d-md-none">
+            <UncontrolledCollapse navbar toggler='#navbar-collapse-main'>
+              <div className='navbar-collapse-header d-md-none'>
                 <Row>
-                  <Col className="collapse-brand" xs="6">
-                    <Link to="/">
+                  <Col className='collapse-brand' xs='6'>
+                    <Link to='/'>
                       <img
-                        alt="..."
-                        src={require("assets/img/brand/argon-react.png")}
+                        alt='Martucci Melillo'
+                        src={require('../../assets/img/brand/logo-martucci.png')}
                       />
                     </Link>
                   </Col>
-                  <Col className="collapse-close" xs="6">
+                  <Col className='collapse-close' xs='6'>
                     <button
-                      className="navbar-toggler"
-                      id="navbar-collapse-main"
+                      className='navbar-toggler'
+                      id='navbar-collapse-main'
                     >
                       <span />
                       <span />
@@ -50,41 +49,25 @@ class AdminNavbar extends React.Component {
                   </Col>
                 </Row>
               </div>
-              <Nav className="ml-auto" navbar>
+              <Nav className='ml-auto' navbar>
                 <NavItem>
-                  <NavLink className="nav-link-icon" to="/" tag={Link}>
-                    <i className="ni ni-planet" />
-                    <span className="nav-link-inner--text">Dashboard</span>
+                  <NavLink
+                    className='nav-link-icon'
+                    to='/auth/login'
+                    tag={Link}
+                  >
+                    <i className='ni ni-curved-next' />
+                    <span className='nav-link-inner--text'>Entrar</span>
                   </NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink
-                    className="nav-link-icon"
-                    to="/auth/register"
+                    className='nav-link-icon'
+                    to='/auth/register'
                     tag={Link}
                   >
-                    <i className="ni ni-circle-08" />
-                    <span className="nav-link-inner--text">Register</span>
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink
-                    className="nav-link-icon"
-                    to="/auth/login"
-                    tag={Link}
-                  >
-                    <i className="ni ni-key-25" />
-                    <span className="nav-link-inner--text">Login</span>
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink
-                    className="nav-link-icon"
-                    to="/admin/user-profile"
-                    tag={Link}
-                  >
-                    <i className="ni ni-single-02" />
-                    <span className="nav-link-inner--text">Profile</span>
+                    <i className='ni ni-single-02' />
+                    <span className='nav-link-inner--text'>Cadastre-se</span>
                   </NavLink>
                 </NavItem>
               </Nav>
