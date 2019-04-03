@@ -50,7 +50,7 @@ export default class AdvCloudAdmin extends React.Component {
           routes={routes}
           logo={{
             innerLink: "/advcloud/index",
-            imgSrc: require("assets/img/brand/argon-react.png"),
+            imgSrc: require("assets/img/brand/logo.png"),
             imgAlt: "..."
           }}
         />
