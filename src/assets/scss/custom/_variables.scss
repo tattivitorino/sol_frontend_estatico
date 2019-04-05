@@ -18,7 +18,7 @@ $gray-600: #8898aa !default;   // Line footer color
 $gray-700: #525f7f !default;   // Line p color
 $gray-800: #32325d !default;   // Line heading color
 $gray-900: #212529 !default;
-$black:    #000 !default;
+$black:    #000000 !default;
 
 $grays: () !default;
 $grays: map-merge((
@@ -33,6 +33,8 @@ $grays: map-merge((
   "900": $gray-900
 ), $grays);
 
+$atex:    #C33764 !default;
+$advcloud:#4AC29A !default;
 $blue:    #5e72e4 !default;
 $indigo:  #5603ad !default;
 $purple:  #8965e0 !default;
@@ -46,6 +48,8 @@ $cyan:    #2bffc6 !default;
 
 $colors: () !default;
 $colors: map-merge((
+  "atex":       $atex,
+  "advcloud":   $advcloud,
   "blue":       $blue,
   "indigo":     $indigo,
   "purple":     $purple,
@@ -63,7 +67,7 @@ $colors: map-merge((
   "gray-dark":  $gray-800
 ), $colors);
 
-$default:       #171718 !default;
+$default:       #172b4d !default;
 $primary:       #a7a954 !default;
 $secondary:     #f7fafc !default;
 $success:       $green !default;
