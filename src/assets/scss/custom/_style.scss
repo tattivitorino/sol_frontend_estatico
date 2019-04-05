@@ -1,5 +1,56 @@
-// CSS Customizado extra
-
+// Retirar cor do input Chrome
 input:-webkit-autofill {    
     -webkit-box-shadow: 0 0 0px 1000px $white inset !important;
+}
+
+// Custom
+.main {
+    min-height: 70vh;
+}
+.hidden {
+    display: none !important;
+}
+.navbar-vertical .navbar-nav .nav-link > i {
+    font-size: 1rem;
+}
+
+
+// @media
+@media (max-width: 991px) {
+    .avatar {
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-vertical.navbar-expand-md .navbar-nav .nav-link.active:before {
+        border-left-width: 3px;
+    }
+    .navbar-vertical.navbar-expand-md .navbar-nav .atex.nav-link.active:before { // ATEX
+        border-left-color: $atex;
+    }
+    .navbar-vertical.navbar-expand-md .navbar-nav .advcloud.nav-link.active:before { // ADV
+        border-left-color: $advcloud;
+    }
+    .navbar-vertical.navbar-expand-md .navbar-nav .nav-link.active {
+        font-weight: 400;
+    }
+    .navbar-vertical.navbar-expand-md .navbar-brand {
+        padding-bottom: 0.5rem;
+    }
+    .navbar-vertical.navbar-expand-md .navbar-brand-img {
+        max-height: 2.5rem;
+    }
+    .navbar-vertical .navbar-collapse:before {
+        margin: 0.5rem -0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        min-height: 100%;
+    }
+    .avatar {
+        margin-bottom: 0;
+    }
 }
