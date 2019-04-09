@@ -36,7 +36,7 @@ git push origin nome_do_branch
 ```
 7. Em seguida, retorne ao **GitHub**, acesse o repositório desejado, clique no botão **Branch: master** (vide imagem acima) e selecione o branch criado.
 
-8. Ao lado do botão **Branch: master**, clique no botão **New pull request**. Você será redirecionado para a tela abaixo, clique em **Create pull request**:
+8. Ao lado do botão **Branch: master**, clique no botão **New pull request**. Você será redirecionado para a tela abaixo, clique em **Create pull request**.:
 
 ![](https://raw.githubusercontent.com/martucci-melillo/imagens_readmes/master/readme_tutorial_fork/create_pull.png)
 
