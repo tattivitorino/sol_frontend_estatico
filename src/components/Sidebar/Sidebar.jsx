@@ -77,8 +77,9 @@ class Sidebar extends React.Component {
         });
     };
     render() {
-        const { bgColor, routes, logo } = this.props;
+        const { bgColor, routes, logo, logo_inferior } = this.props;
         let navbarBrandProps;
+        let navbarBrandPropsInferior;
         if (logo && logo.innerLink) {
             navbarBrandProps = {
                 to: logo.innerLink,
@@ -89,6 +90,10 @@ class Sidebar extends React.Component {
                 href: logo.outterLink,
                 target: '_blank'
             };
+        }
+        navbarBrandPropsInferior = {
+            to: logo_inferior.innerLink,
+            tag: Link
         }
         return (
             <Navbar
@@ -223,27 +228,19 @@ class Sidebar extends React.Component {
 
                         {/* Navigation fixo */}
                         <hr className='my-3' />
-                        <h6 className='navbar-heading text-muted'>Departamentos</h6>
-                        <Nav className='mb-md-3' navbar>
-                            <NavItem>
-                                <NavLink to='/dashboard/index' tag={Link}>
-                                    <i className='fa fa-home' />
-                                    Home
-                                </NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink to='/atex/index' tag={Link}>
-                                    <i className='fa fa-refresh' />
-                                    ATEX
-                                </NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink to='/advcloud/index' tag={Link}>
-                                    <i className='fa fa-cloud' />
-                                    ADVCloud
-                                </NavLink>
-                            </NavItem>
-                        </Nav>
+                        <NavbarBrand className='pt-0 align-bottom' {...navbarBrandPropsInferior}>
+                            <img
+                                alt={logo_inferior.imgAlt}
+                                className='navbar-brand-img align-bottom'
+                                src={logo_inferior.imgSrc}
+                            />
+                        </NavbarBrand>
+
+
+                        {/* <Link to={logo_inferior.innerLink}>
+                            <img className="img-resposive" src={logo_inferior.imgSrc} alt={logo_inferior.imgAlt} />
+                        </Link> */}
+                        
 
                     </Collapse>
                 </Container>

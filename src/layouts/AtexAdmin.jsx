@@ -51,9 +51,14 @@ export default class AtexAdmin extends React.Component {
                     {...this.props}
                     routes={routes}
                     logo={{
-                        innerLink: '/admin/index',
+                        innerLink: '/atex/index',
                         imgSrc: require('assets/img/brand/logo-atex.png'),
                         imgAlt: 'ATEX'
+                    }}
+                    logo_inferior={{
+                        innerLink: '/advcloud/index',
+                        imgSrc: require('assets/img/brand/logo-adv.png'),
+                        imgAlt: 'ADVCloud'
                     }}
 
                 />

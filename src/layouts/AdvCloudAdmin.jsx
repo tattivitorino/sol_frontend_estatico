@@ -52,6 +52,11 @@ export default class AdvCloudAdmin extends React.Component {
                         imgSrc: require('assets/img/brand/logo-adv.png'),
                         imgAlt: 'ADVCloud'
                     }}
+                    logo_inferior={{
+                        innerLink: '/atex/index',
+                        imgSrc: require('assets/img/brand/logo-atex.png'),
+                        imgAlt: 'ATEX'
+                    }}
                 />
                 <div className='main-content' ref='mainContent'>
                     <AdminNavbar

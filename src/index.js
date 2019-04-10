@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { Router, BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import {createMemoryHistory} from 'history'
 
 import "assets/vendor/nucleo/css/nucleo.css";
 import "assets/vendor/@fortawesome/fontawesome-free/css/all.min.css";
@@ -12,8 +13,11 @@ import AdvCloudAdmin from "layouts/AdvCloudAdmin.jsx";
 import AtexAdmin from "layouts/AtexAdmin.jsx";
 import AuthLayout from "layouts/Auth.jsx";
 
+const history=createMemoryHistory({initialEntries: ['/']})
+
+
 ReactDOM.render(
-    <BrowserRouter>
+    <Router  history={history}>
         <Switch>
             {<Route path="/dashboard" render={props => <Dashboard {...props} />} />}
             <Route path="/advcloud" render={props => <AdvCloudAdmin {...props} />} />
@@ -21,6 +25,6 @@ ReactDOM.render(
             <Route path="/auth" render={props => <AuthLayout {...props} />} />
             <Redirect from="/" to="/auth/login" />
         </Switch>
-    </BrowserRouter>,
+    </Router>,
     document.getElementById("root")
 );
