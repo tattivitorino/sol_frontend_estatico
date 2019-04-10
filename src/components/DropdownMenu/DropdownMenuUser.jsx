@@ -42,14 +42,16 @@ class DropdownMenuUser extends React.Component {
                                 <i className='ni ni-settings-gear-65' />
                                 <span>Configurações</span>
                             </DropdownItem>
-                            <DropdownItem to='/admin/user-profile' tag={Link}>
+                            
+                            {/* <DropdownItem to='/admin/user-profile' tag={Link}>
                                 <i className='ni ni-bell-55' />
                                 <span>Notificações</span>
                             </DropdownItem>
                             <DropdownItem to='/admin/user-profile' tag={Link}>
                                 <i className='ni ni-chat-round' />
                                 <span>Chat</span>
-                            </DropdownItem>
+                            </DropdownItem> */}
+
                             <DropdownItem divider />
                             <DropdownItem to='/' tag={Link}>
                                 <i className='ni ni-user-run' />
